@@ -1,0 +1,104 @@
+1.- definir las coordenadas de los puntos
+2.- una vez definido las coordenadas B y C comparar
+coordenadas de B con sus puntos cercanos 
+3.- Alinear B en el eje Y
+4.- Alinear B en el eje X
+
+------------------------------------------
+
+- puntoB = (2,8)
+- puntoC = (8,4)
+
+- Mientras puntoB !=(sea distinto) de puntoC hacer: 
+
+	Si puntoB.x es > puntoC.x entonces:
+		puntoB.Izq() (moverse a la izq)
+	Fin si
+
+	Si puntoB.x es < puntoC.x entonces:
+		puntoB.Der() (mover hacia Der)
+	Fin si
+	
+	Si puntoB.y es > puntoC.y entonces: 
+		puntoB.Abajo() (moverse hacia abajo)
+	Fin si
+
+	Si puntoB.y es < puntoC.y entonces:	
+		puntoB.Arriba() (moverse hacia arriba)
+	Fin si
+Fin Mientras
+
+-----------------------------------------------------------
+
+- Marco atiende 1 persona por cada 2 personas que Marie atiende
+- Tomas puede atender un máximo de 3 personas antes de reponga la estanteria
+- Cuanta gente atiende cada cajero ?
+- total de personas: 15
+
+-fase inicial
+clientes totales: 15
+Marco: 1 cliente
+Marie: 2 clientes
+Tomas: 3 clientes
+
+-2da fase
+clientes totales: 9
+marco 1
+marie 2
+
+-3da fase
+clientes totales: 6
+marco 1
+marie 2
+
+-4da fase
+clientes totales: 3
+marco 1
+marie 2
+
+sumar 
+marco = 1+1+1+1 = 4
+marie = 2+2+2+2 = 8
+tomas = 3+0+0+0 = 3
+
+---------------------------------------------------------------------
+
+- Cliente = 15
+- Marco = 0; Marie = 0; Tomas = 0;
+
+- Mientras Cliente sea mayor a 0, hacer:
+	Marco = Marco + 1;
+	Cliente = Cliente - 1;
+
+	Marie = Marie + 2;
+	Cliente = Cliente -2;
+
+	Si Tomas es menor a 3 entonces:
+		Tomas = Tomas + 3
+		Cliente = Cliente -3
+	Fin Si
+Fin Mientras
+
+----------------------------------------------------------------------
+
+Tengo 12 personas [A, B, C, D, E, F, G, H, I, J, K, L]
+
+-Separo en partes iguales
+
+[A B C D E F] grupo 1
+[G H I J K L] grupo 2
+
+-Comparar ambos grupos (Primer uso)
+-Dividir en partes iguales el grupo con menor peso, (asumimos que es el grupo 2 para el ejemplo)
+
+[G H I]
+[J K L]
+
+-Comparar ambos grupos y dejamos el grupo de menor peso (Segundo uso)
+
+[J K L]
+
+-Comparar un par cualquiera (Tercer uso)
+
+	Si la persona con menor peso está en la balanza, es esa
+	Sino, es el que no comparamos

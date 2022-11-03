@@ -3,19 +3,19 @@ package com.generation.demo.models;
 public class Botella {
 
     
-    // String tamanio; //pequeño, mediano, grande
+    String tamanio; //pequeño, mediano, grande
     String liquido; //agua, bebida, porotos, etc.
     String marca;   //ccu, coca cola company
     Integer ml;     //cantidad de mililitros
     String material;//vidrio, plastico 
 
     
-    // public String getTamanio() {
-    //     return tamanio;
-    // }
-    // public void setTamanio(String tamanio) {
-    //     this.tamanio = tamanio;
-    // }
+    public String getTamanio() {
+        return tamanio;
+    }
+    public void setTamanio(String tamanio) {
+        this.tamanio = tamanio;
+    }
     public String getLiquido() {
         return liquido;
     }

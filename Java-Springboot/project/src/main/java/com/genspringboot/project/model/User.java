@@ -29,23 +29,25 @@ public class User {
     private String correo;
 
     //vamos a crear la relacion uno es a uno, one to one
-    @JsonBackReference
+    // @JsonBackReference
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private License license;
 
     //relacion one to many
-    @JsonBackReference
+    // @JsonBackReference
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<BuySell> buySell;
 
     public User() {
     }
 
-    public User(int id, String name, String lastName, String correo) {
+    public User(int id, String name, String lastName, String correo, License license, List<BuySell> buySell) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.correo = correo;
+        this.license = license;
+        this.buySell = buySell;
     }
 
     public int getId() {
@@ -80,5 +82,21 @@ public class User {
         this.correo = correo;
     }
 
+    public License getLicense() {
+        return license;
+    }
+
+    public void setLicense(License license) {
+        this.license = license;
+    }
+
+    public List<BuySell> getBuySell() {
+        return buySell;
+    }
+
+    public void setBuySell(List<BuySell> buySell) {
+        this.buySell = buySell;
+    }
+    
     
 }

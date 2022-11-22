@@ -46,10 +46,12 @@ public class BuySell {
     public BuySell() {
     }
 
-    public BuySell(Integer id, @Range(min = 0) int monto, Date fechaCompra) {
+    public BuySell(Integer id, @Range(min = 0) int monto, Date fechaCompra, User user, List<Car> cars) {
         this.id = id;
         this.monto = monto;
         this.fechaCompra = fechaCompra;
+        this.user = user;
+        this.cars = cars;
     }
 
     public Integer getId() {
@@ -75,6 +77,24 @@ public class BuySell {
     public void setFechaCompra(Date fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    
 
     
 }

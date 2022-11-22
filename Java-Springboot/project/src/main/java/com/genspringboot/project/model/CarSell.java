@@ -31,9 +31,11 @@ public class CarSell {
     public CarSell() {
     }
 
-    public CarSell(Integer id, int cantidad) {
+    public CarSell(Integer id, int cantidad, Car car, BuySell buysell) {
         this.id = id;
         this.cantidad = cantidad;
+        this.car = car;
+        this.buysell = buysell;
     }
 
     public Integer getId() {
@@ -51,6 +53,24 @@ public class CarSell {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public BuySell getBuysell() {
+        return buysell;
+    }
+
+    public void setBuysell(BuySell buysell) {
+        this.buysell = buysell;
+    }
+
+    
 
     
     

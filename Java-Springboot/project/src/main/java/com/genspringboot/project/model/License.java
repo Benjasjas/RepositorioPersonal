@@ -25,7 +25,7 @@ public class License {
     private String estado;
 
     //recepcion de la relacion one to one
-    @JsonManagedReference
+    // @JsonManagedReference
     @OneToOne(fetch = FetchType.EAGER)
     //se crea la columna con la FK
     @JoinColumn (name = "user_id")
@@ -34,12 +34,13 @@ public class License {
     public License() {
     }
 
-    public License(Integer id, int numero, Date fechaVencimiento, String clase, String estado) {
+    public License(Integer id, int numero, Date fechaVencimiento, String clase, String estado, User user) {
         this.id = id;
         this.numero = numero;
         this.fechaVencimiento = fechaVencimiento;
         this.clase = clase;
         this.estado = estado;
+        this.user = user;
     }
 
     public Integer getId() {
@@ -81,6 +82,16 @@ public class License {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    
 
     
 }

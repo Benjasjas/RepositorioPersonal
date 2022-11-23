@@ -27,7 +27,7 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping("/Car/save") 
+    @PostMapping("/Car/save") 
     public void guardarAuto(@RequestBody Car car){
         carService.saveCar(car);
     }

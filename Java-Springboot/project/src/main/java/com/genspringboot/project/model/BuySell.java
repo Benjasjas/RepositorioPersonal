@@ -29,7 +29,7 @@ public class BuySell {
     private Date fechaCompra;
 
     //recepciona one to many (many to one)
-    @JsonManagedReference
+    // @JsonManagedReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;

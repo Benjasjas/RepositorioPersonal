@@ -27,7 +27,7 @@ public class Car {
     private int valor;
     
     //many to many
-    @JsonIgnore
+    // @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "carSell", //nombre de la talba relacional

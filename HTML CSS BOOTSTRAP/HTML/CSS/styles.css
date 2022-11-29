@@ -1,0 +1,33 @@
+/* esto es un comentario */
+
+
+/* Selectores */
+
+
+/* Por etiqueta */
+
+h1 {
+    color: darkmagenta;
+}
+
+h2 {
+    color: blue;
+}
+
+
+/* Por clase */
+
+.subtitulo {
+    color: rosybrown;
+}
+
+.parrafo1 {
+    color: darkorange;
+}
+
+
+/* Por id */
+
+#parrafo2 {
+    color: forestgreen;
+}

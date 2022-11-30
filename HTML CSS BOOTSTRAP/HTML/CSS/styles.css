@@ -26,12 +26,23 @@ p {
 }
 
 .parrafo1 {
-    color: blue;
+    color: rgb(251, 0, 0);
+    background-image: url(/img/304862858_1084884455480674_7945129396276351468_n.jpg);
+    background-size: 50px;
 }
 
 
 /* Por id */
 
 #parrafo2 {
-    color: forestgreen;
+    color: rgb(57, 236, 57);
+    background-color: darkgoldenrod;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    text-align: justify;
+    margin: 200px 50px auto;
+    padding: 50px;
 }

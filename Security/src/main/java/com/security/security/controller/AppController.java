@@ -8,6 +8,7 @@ public class AppController {
     
     @GetMapping({"/","/login"})
     public String index(){
+        //el retorno se debe llamar IGUAL que nuestro html
         return "index";
     }
 
@@ -25,4 +26,5 @@ public class AppController {
     public String admin(){
         return "admin";
     }
+
 }

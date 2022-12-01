@@ -27,7 +27,7 @@
                 <div class="col-12 user-img">
                     <img src="static/img/user.png" th:src="@{/img/user.png}" />
                 </div>
-                <form class="col-12" th:action="@{/menu}" method="get">
+                <form class="col-12" th:action="@{/login}" method="post">
                     <div class="form-group" id="user-group">
                         <input type="text" class="form-control" placeholder="Nombre de usuario" name="username" />
                     </div>
@@ -37,7 +37,7 @@
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                 </form>
                 <div class="col-12 forgot">
-                    <a href="#">Recordar contrasena?</a>
+                    <a href="#">Recordar contraseña?</a>
                 </div>
                 <div th:if="${param.error}" class="alert alert-danger" role="alert">
                     Nombre de usuario o contraseña inválido.

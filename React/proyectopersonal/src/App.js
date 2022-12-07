@@ -1,12 +1,15 @@
-import React from 'react';
-import simon from './img/simon.png';
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomePage } from "./pages";
 
-const App =() => {
+const App = () => {
     return (
-        <div>
-            <h1 align="center" >Bienvenidos a mi página personal</h1>
-            <img src={simon} alt="simon"/>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
+
 export default App;

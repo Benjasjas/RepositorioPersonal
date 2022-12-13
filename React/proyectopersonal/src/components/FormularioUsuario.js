@@ -1,4 +1,5 @@
 import React from 'react';
+import Boton from './Boton';
 
 const FormularioUsuario = () => {
     return (
@@ -34,6 +35,7 @@ const FormularioUsuario = () => {
                 </div>
             </div>
             {/* </form> */}
+            <Boton infoBoton={"Agregar Usuario"}></Boton>
         </div>
     )
 }

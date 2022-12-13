@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { } from 'react';
 
-const Boton = () => {
+
+const Boton = ({ infoBoton, handleOnClick }) => {
+
     return (
         <div>
-            <button class="btn btn-primary" type="submit">Button</button>
+            <button
+                class="btn btn-primary"
+                type="submit"
+                onClick={() => {
+                    handleOnClick();
+                }}
+            >{infoBoton}</button>
         </div>
     )
 }

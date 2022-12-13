@@ -1,7 +1,11 @@
-import React from 'react';
-import { FormularioAuto, FormularioUsuario, Tabla } from "../components";
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Boton, FormularioUsuario, Tabla } from "../components";
 
 const HomePage = () => {
+    const navigate = useNavigate();
+    const handleOnClick = useCallback(() => navigate("/Auto", {}, [navigate]));
+
     const users = [
         {
             id: "1",
@@ -26,22 +30,19 @@ const HomePage = () => {
         }
     ]
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        console.log("cualquier cosa", e.target.value)
-    }
-
     return (
         <div class="container" >
             <form>
                 <div style={{ display: "grid", marginTop: "50px", width: "80%", gridGap: "50px" }}>
-                    <FormularioUsuario />
-                    <FormularioAuto />
-                    <div style={{ display: "grid", justifyContent: "center" }}>
-                        <button onClick={onSubmit} class="btn btn-primary" >Comprar</button>
-                    </div>
+                    <FormularioUsuario></FormularioUsuario>
                 </div>
             </form>
+            <br></br>
+            <Boton
+                infoBoton={"Enviar"}
+                handleOnClick={handleOnClick}
+            ></Boton>
+            <br></br>
             <Tabla users={users} />
         </div>
     )

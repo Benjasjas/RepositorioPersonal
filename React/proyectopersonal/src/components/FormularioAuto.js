@@ -1,36 +1,47 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Boton from './Boton';
+
 
 const FormularioAuto = () => {
+    const navigate = useNavigate();
+    const handleOnClick = useCallback(() => navigate("/RickRoll", {}, [navigate]));
+
     return (
         <div style={{ display: "grid", gridGap: "10px", justifyContent: "center" }}>
             <h2 class="text-center">Formulario Auto</h2>
-            {/* <form class="row g-3 needs-validation" novalidate> */}
-            {/* <div class="col-md-4">
-                <label for="idAuto" class="form-label">ID</label>
-                <input type="text" class="form-control" id="idAuto" />
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div> */}
-            <div style={{ minWidth: "300px" }} class="col-md-4">
+
+            <div>
                 <label for="modelo" class="form-label">Modelo</label>
-                <input type="text" class="form-control" id="modelo" />
-                <div class="valid-feedback">
-                    Looks good!
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">modelo a</option>
+                        <option value="2">modelo b</option>
+                        <option value="3">modelo c</option>
+                    </select>
                 </div>
             </div>
-            <div style={{ minWidth: "300px" }} class="col-md-4">
-                <label for="marca" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="marca" />
-                <div class="valid-feedback">
-                    Looks good!
+            <div>
+                <label for="modelo" class="form-label">Marca</label>
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">marca 1</option>
+                        <option value="2">marca 2</option>
+                        <option value="3">marca 3</option>
+                    </select>
                 </div>
             </div>
-            <div style={{ minWidth: "300px" }} class="col-md-4">
-                <label for="precio" class="form-label">Precio</label>
-                <input type="text" class="form-control" id="precio" />
-                <div class="valid-feedback">
-                    Looks good!
+            <div>
+                <label for="modelo" class="form-label">Color</label>
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">rojo</option>
+                        <option value="2">verde</option>
+                        <option value="3">azul</option>
+                    </select>
                 </div>
             </div>
             <div style={{ maxWidth: "300px" }} class="col-12">
@@ -45,6 +56,10 @@ const FormularioAuto = () => {
                     </div>
                 </div>
             </div>
+            <Boton
+                infoBoton={"Comprar"}
+                handleOnClick={handleOnClick}
+            ></Boton>
             {/* </form> */}
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
-import Boton from './Boton';
 
-const Table = ({ users }) => {
+
+const Table = ({ users, deleteUser, setStateEditado }) => {
 
     return (
         <div>
@@ -9,10 +9,10 @@ const Table = ({ users }) => {
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">RUT</th>
                         <th scope="col">Nombre </th>
                         <th scope="col">Apellido</th>
-                        <th scope="col">Auto</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">RUT</th>
                         <th scope="col">Boton</th>
                     </tr>
                 </thead>
@@ -20,30 +20,32 @@ const Table = ({ users }) => {
                     {users.map(user =>
                     (<tr>
                         <th scope="row">{user.id}</th>
-                        <td>{user.rut}</td>
                         <td>{user.name}</td>
                         <td>{user.lastName}</td>
-                        <td>{user.car}</td>
-                        <td><Boton /></td>
+                        <td>{user.correo}</td>
+                        <td>
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                onClick={() => {
+                                    deleteUser(user.id);
+                                }}
+                            >
+                                Eliminar
+                            </button>
+                        </td>
+                        <td>
+                            <button
+                                type="button"
+                                class="btn btn-warning"
+                                onClick={() => {
+                                    setStateEditado(user);
+                                }}
+                            >
+                                Editar
+                            </button>
+                        </td>
                     </tr>))}
-
-                    {/*                     <tr>
-                        <th scope="row">Mark</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td><Boton /></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td><Boton /></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td><Boton /></td>
-                    </tr> */}
                 </tbody>
             </table>
         </div>

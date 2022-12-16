@@ -9,21 +9,21 @@ const AutoPage = () => {
             rut: "12.345.678-9",
             name: "mark",
             lastName: "otto",
-            car: "hyundai",
+            correo: "correo@correo.com",
         },
         {
             id: "2",
             rut: "12.345.678-9",
             name: "Jacob",
             lastName: "Thornton",
-            car: "Chevrolet",
+            correo: "equisde@correo.com",
         },
         {
             id: "3",
             rut: "12.345.678-9",
             name: "Lang",
             lastName: "Chang",
-            car: "Toyota",
+            correo: "bigbig@correo.com",
         }
     ]
 
